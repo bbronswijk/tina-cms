@@ -1,5 +1,5 @@
 import ClientPage from "./client-page";
-import client from "../../tina/__generated__/client";
+import client from "../../../tina/__generated__/client";
 
 export async function generateStaticParams() {
   const pages = await client.queries.pageConnection();
@@ -19,5 +19,10 @@ export default async function Page({
     relativePath: `${params.filename}.mdx`,
   });
 
-  return <ClientPage {...data} />;
+  return (
+    <div>
+      Test2
+      <ClientPage {...data}></ClientPage>
+    </div>
+  );
 }

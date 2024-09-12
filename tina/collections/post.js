@@ -20,6 +20,31 @@ export default {
         component: "textarea",
       },
     },
+    {
+      label: "Testimonial",
+      name: "testimonial",
+      type: "object",
+      fields: [
+        {
+          label: "Author",
+          name: "author",
+          type: "string",
+        },
+        {
+          label: "Role",
+          name: "role",
+          type: "string",
+        },
+        {
+          label: "Quote",
+          name: "quote",
+          type: "string",
+          ui: {
+            component: "textarea",
+          },
+        },
+      ],
+    },
   ],
   ui: {
     router: ({ document }) => {

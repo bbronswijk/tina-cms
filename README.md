@@ -1,4 +1,4 @@
-This is a [Tina CMS](https://tina.io/) project.
+# This is a [Tina CMS](https://tina.io/) project.
 
 ## Local Development
 

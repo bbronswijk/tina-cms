@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import "./global.css";
 
 export default function RootLayout({
   children,
@@ -8,13 +9,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        style={{
-          margin: "3rem",
-        }}
-      >
+      <body className="bg-gray-100">
         <header>
-          <Link href="/">Home</Link>
+          <Link href="/public">Home</Link>
           {" | "}
           <Link href="/posts">Posts</Link>
         </header>
