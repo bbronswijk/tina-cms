@@ -4,6 +4,14 @@ module.exports = {
   content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        layout: `
+					minmax(var(--padding-inline), 1fr)
+					min(50% - var(--padding-inline), var(--content-max-width) / 2)
+					min(50% - var(--padding-inline), var(--content-max-width) / 2)
+					minmax(var(--padding-inline), 1fr);
+				`,
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

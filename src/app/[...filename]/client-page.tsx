@@ -1,7 +1,12 @@
 "use client";
-import { TinaMarkdown } from "tinacms/dist/rich-text";
-import { tinaField, useTina } from "tinacms/dist/react";
+import { useTina } from "tinacms/dist/react";
 import type { PageQuery } from "../../../tina/__generated__/types";
+import { PageBlocksHero } from "@/app/[...filename]/PageBlocksHero";
+import { PageBlocksFeatures } from "@/app/[...filename]/PageBlocksFeatures";
+import { PageBlocksPromo } from "@/app/[...filename]/PageBlocksPromo";
+import { PageBlocksContent } from "@/app/[...filename]/PageBlocksContent";
+import { PageBlocksTestimonials } from "@/app/[...filename]/PageBlocksTestimonials";
+import { PageBlocksCallToAction } from "@/app/[...filename]/PageBlocksCallToAction";
 
 interface ClientPageProps {
   query: string;
@@ -19,47 +24,30 @@ export default function ClientPage(props: ClientPageProps) {
     data: props.data,
   });
 
-  const content = data.page.body;
-  const blocks = data.page.blocks;
   return (
-    <div>
-      <div data-tina-field={tinaField(data.page, "body")}>
-        <TinaMarkdown content={content} />
-      </div>
-
-      <div data-tina-field={tinaField(data.page, "testimonial")}>
-        {data.page.testimonial?.author}
-        {data.page.testimonial?.role}
-        {data.page.testimonial?.quote}
-      </div>
-
-      <div>
-        {blocks
-          ? blocks.map(function (block, i) {
-              switch (block?.__typename) {
-                case "PageBlocksContent":
-                  return (
-                    <div
-                      data-tina-field={tinaField(data.page.blocks, i)}
-                      key={i + block.__typename}
-                    >
-                      {block?.__typename}
-                    </div>
-                  );
-                case "PageBlocksHero":
-                  return (
-                    <div key={i + block.__typename}>{block?.__typename}</div>
-                  );
-                case "PageBlocksFeatures":
-                  return (
-                    <div key={i + block.__typename}>{block?.__typename}</div>
-                  );
-                default:
-                  return null;
-              }
-            })
-          : null}
-      </div>
-    </div>
+    <>
+      {data.page.blocks?.map((block, i) => {
+        switch (block?.__typename) {
+          case "PageBlocksHero":
+            return <PageBlocksHero key={i + block.__typename} {...block} />;
+          case "PageBlocksContent":
+            return <PageBlocksContent key={i + block.__typename} {...block} />;
+          case "PageBlocksFeatures":
+            return <PageBlocksFeatures key={i + block.__typename} {...block} />;
+          case "PageBlocksPromo":
+            return <PageBlocksPromo key={i + block.__typename} {...block} />;
+          case "PageBlocksTestimonials":
+            return (
+              <PageBlocksTestimonials key={i + block.__typename} {...block} />
+            );
+          case "PageBlocksCall":
+            return (
+              <PageBlocksCallToAction key={i + block.__typename} {...block} />
+            );
+          default:
+            return null;
+        }
+      })}
+    </>
   );
 }

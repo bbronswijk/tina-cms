@@ -19,10 +19,5 @@ export default async function Page({
     relativePath: `${params.filename}.mdx`,
   });
 
-  return (
-    <div>
-      Test2
-      <ClientPage {...data}></ClientPage>
-    </div>
-  );
+  return <ClientPage {...data}></ClientPage>;
 }
