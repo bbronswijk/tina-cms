@@ -27,7 +27,8 @@ export const page = {
       if (document._sys.filename === "home") {
         return `/`;
       }
-      return undefined;
+
+      return `/${document._sys.filename}`;
     },
   },
 };
