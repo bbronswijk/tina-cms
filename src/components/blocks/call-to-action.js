@@ -1,4 +1,4 @@
-import { textarea, title } from "../utils/fields";
+import { textarea, title } from "../../../tina/collections/utils/fields";
 
 export const callToAction = {
   name: "call",

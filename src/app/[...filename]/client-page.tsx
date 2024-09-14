@@ -1,12 +1,12 @@
 "use client";
 import { useTina } from "tinacms/dist/react";
 import { PageAndNavQuery } from "../../../tina/__generated__/types";
-import { Hero } from "@/app/[...filename]/Hero";
-import { Features } from "@/app/[...filename]/Features";
-import { Promo } from "@/app/[...filename]/Promo";
-import { Content } from "@/app/[...filename]/Content";
-import { Testimonials } from "@/app/[...filename]/Testimonials";
-import { CallToAction } from "@/app/[...filename]/CallToAction";
+import { Hero } from "@/components/blocks/Hero";
+import { Features } from "@/components/blocks/Features";
+import { Promo } from "@/components/blocks/Promo";
+import { Content } from "@/components/blocks/Content";
+import { Testimonials } from "@/components/blocks/Testimonials";
+import { CallToAction } from "@/components/blocks/CallToAction";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 

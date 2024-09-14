@@ -13,7 +13,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-800 text-white grid grid-cols-layout">
+      <body className="bg-gray-800 text-white grid grid-cols-layout grid-rows-[auto,_1fr,_auto] min-h-dvh">
         {children}
       </body>
     </html>

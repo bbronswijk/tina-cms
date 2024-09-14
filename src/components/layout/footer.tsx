@@ -20,7 +20,7 @@ export const Footer = (props: FooterPartsFragment) => (
         width={150}
         height={150}
       />
-      <div className="grid grid-cols-4 gap-x-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         <div className="flex text-sm gap-4 align-baseline">
           <MapPin className="h-6 min-w-6" />
           <p>{props.about}</p>
@@ -40,7 +40,7 @@ export const Footer = (props: FooterPartsFragment) => (
             .filter((link) => !!link)
             .map((link) => (
               <Link
-                key={link.link?.id}
+                key={link.title}
                 href={link.link?._sys.filename ?? ""}
                 className="hover:underline"
               >
@@ -49,7 +49,7 @@ export const Footer = (props: FooterPartsFragment) => (
             ))}
         </ul>
 
-        <div className="flex gap-4 justify-end">
+        <div className="flex gap-4 md:justify-end">
           <Facebook />
           <Twitter />
           <Instagram />

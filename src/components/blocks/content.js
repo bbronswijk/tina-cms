@@ -1,4 +1,4 @@
-import { richText } from "../utils/fields";
+import { richText } from "../../../tina/collections/utils/fields";
 
 export const content = {
   name: "content",

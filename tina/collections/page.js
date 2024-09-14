@@ -1,9 +1,9 @@
-import { hero } from "./blocks/hero";
-import { features } from "./blocks/features";
-import { content } from "./blocks/content";
-import { promo } from "./blocks/promo";
-import { testimonials } from "./blocks/testimonials";
-import { callToAction } from "./blocks/call-to-action";
+import { hero } from "../../src/components/blocks/hero.js";
+import { features } from "../../src/components/blocks/features.js";
+import { content } from "../../src/components/blocks/content.js";
+import { promo } from "../../src/components/blocks/promo.js";
+import { testimonials } from "../../src/components/blocks/testimonials.js";
+import { callToAction } from "../../src/components/blocks/call-to-action.js";
 
 /**
  * @type {import('tinacms').Collection}

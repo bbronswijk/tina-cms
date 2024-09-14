@@ -3,7 +3,7 @@ import { PageBlocksTestimonials } from "../../../tina/__generated__/types";
 
 export function Testimonials(props: PageBlocksTestimonials) {
   return (
-    <section className="grid grid-cols-3 gap-x-12">
+    <section className="grid grid-cols-1 md:grid-cols-3 gap-12">
       {props?.items?.map(({ name, quote, image, role }) => (
         <article
           key={name}

@@ -4,9 +4,9 @@ import { PageBlocksPromo } from "../../../tina/__generated__/types";
 
 export function Promo({ image, title, content }: PageBlocksPromo) {
   return (
-    <section className="grid grid-cols-2 my-24 gap-x-12 items-center">
+    <section className="grid grid-cols-1 md:grid-cols-2 my-24 gap-12 items-center">
       <Image
-        className="mx-auto"
+        className="mx-auto max-w-full w-[500px]"
         src={image}
         alt="Illustration"
         width={600}

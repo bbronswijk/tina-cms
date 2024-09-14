@@ -1,4 +1,8 @@
-import { image, richText, textarea } from "../utils/fields";
+import {
+  image,
+  richText,
+  textarea,
+} from "../../../tina/collections/utils/fields";
 
 export const promo = {
   name: "promo",

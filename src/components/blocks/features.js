@@ -1,4 +1,9 @@
-import { image, list, textarea, title } from "../utils/fields";
+import {
+  image,
+  list,
+  textarea,
+  title,
+} from "../../../tina/collections/utils/fields";
 
 export const features = {
   name: "features",

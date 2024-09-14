@@ -1,4 +1,4 @@
-import { image, textarea } from "../utils/fields";
+import { image, textarea } from "../../../tina/collections/utils/fields";
 
 export const hero = {
   name: "hero",
