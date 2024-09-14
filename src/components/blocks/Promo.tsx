@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { PageBlocksPromo } from "../../../tina/__generated__/types";
 import { BreakoutSection } from "@/components/layout/section";
+import { RichContent } from "@/components/ui/RichContent";
 
 export function Promo({ image, title, content }: PageBlocksPromo) {
   return (
@@ -15,7 +15,7 @@ export function Promo({ image, title, content }: PageBlocksPromo) {
       />
       <article className="space-y-6 max-w-[60ch]">
         <h2 className="font-medium text-3xl">{title}</h2>
-        <TinaMarkdown content={content} />
+        <RichContent content={content} />
       </article>
     </BreakoutSection>
   );

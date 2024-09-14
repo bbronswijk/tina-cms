@@ -29,7 +29,7 @@ export default function ClientPage(props: ClientPageProps) {
   return (
     <>
       <Header {...data.nav} />
-      <main className="grid col-start-1 -col-end-1 mt-20 space-y-40 grid-cols-subgrid">
+      <main className="grid col-start-1 -col-end-1 my-20 space-y-40 grid-cols-subgrid">
         <Blocks blocks={data.page.blocks} />
       </main>
       <Footer {...data.footer} />
