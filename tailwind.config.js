@@ -5,11 +5,16 @@ module.exports = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        layout: `
-					minmax(var(--padding-inline), 1fr)
-					min(50% - var(--padding-inline), var(--content-max-width) / 2)
-					min(50% - var(--padding-inline), var(--content-max-width) / 2)
-					minmax(var(--padding-inline), 1fr);
+        layout: `					
+					  [full-width-start] minmax(var(--padding-inline), 1fr)
+            [breakout-start] minmax(0, var(--breakout-size))
+            [content-start] min(
+              100% - (var(--padding-inline) * 2),
+              var(--content-max-width)
+            )
+            [content-end]
+            minmax(0, var(--breakout-size)) [breakout-end]
+            minmax(var(--padding-inline), 1fr) [full-width-end];
 				`,
       },
       borderRadius: {

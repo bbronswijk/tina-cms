@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { PageBlocksCall } from "../../../tina/__generated__/types";
+import { ContentSection } from "@/components/layout/section";
 
 export function CallToAction({ title, text }: PageBlocksCall) {
   return (
-    <section
-      className="rounded shadow-lg col-start-1 col-end-5 bg-gray-700 p-4 md:p-10 md:px-14 max-w-[900px] relative mx-auto"
+    <ContentSection
+      className="rounded shadow-lg bg-gray-700 p-4 md:p-10 md:px-14 relative mx-auto -mb-[120px]"
       style={{ marginBottom: -120 }}
     >
       <h2 className="font-medium text-3xl text-center">{title}</h2>
@@ -16,6 +17,6 @@ export function CallToAction({ title, text }: PageBlocksCall) {
         />
         <Button>Get Started For Free</Button>
       </form>
-    </section>
+    </ContentSection>
   );
 }

@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { PageBlocksTestimonials } from "../../../tina/__generated__/types";
+import { BreakoutSection } from "@/components/layout/section";
 
 export function Testimonials(props: PageBlocksTestimonials) {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <BreakoutSection className="grid grid-cols-1 md:grid-cols-3 gap-12">
       {props?.items?.map(({ name, quote, image, role }) => (
         <article
           key={name}
@@ -25,6 +26,6 @@ export function Testimonials(props: PageBlocksTestimonials) {
           </footer>
         </article>
       ))}
-    </section>
+    </BreakoutSection>
   );
 }

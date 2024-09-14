@@ -3,7 +3,7 @@ import Image from "next/image";
 import { NavPartsFragment } from "../../../tina/__generated__/types";
 
 export const Header = ({ items }: NavPartsFragment) => (
-  <header className="flex col-start-2 flex-wrap gap-6 col-end-4 items-center justify-center py-8">
+  <header className="flex flex-wrap gap-6 items-center justify-center py-8 col-[content]">
     <Link href="/" className="cursor-pointer">
       <Image src="/images/logo.svg" alt="Fylo logo" width={100} height={100} />
     </Link>

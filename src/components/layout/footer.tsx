@@ -11,8 +11,8 @@ import { FooterPartsFragment } from "../../../tina/__generated__/types";
 import Link from "next/link";
 
 export const Footer = (props: FooterPartsFragment) => (
-  <footer className="grid grid-cols-subgrid col-start-1 col-end-5 bg-gray-900 text-white py-40">
-    <section className="grid col-start-2 col-end-4 pt-16">
+  <footer className="grid grid-cols-subgrid col-[full-width] bg-gray-900 text-white py-40">
+    <section className="grid col-[breakout] pt-16">
       <Image
         className="mb-10"
         src="/images/logo.svg"
