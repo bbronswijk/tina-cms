@@ -13,7 +13,7 @@ import {
 
 export const metadata: Metadata = {
   title: "Fylo",
-  icons: "/favicon.png",
+  icons: "/favicon.ico",
 };
 
 export default function RootLayout({
