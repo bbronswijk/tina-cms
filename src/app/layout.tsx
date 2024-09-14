@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { Metadata } from "next";
 import "./global.css";
 import Image from "next/image";
@@ -24,34 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-gray-800 text-white grid grid-cols-layout">
-        <header className="flex col-start-2 col-end-4 items-center py-8">
-          <Link href="/" className="cursor-pointer">
-            <Image
-              src="/images/logo.svg"
-              alt="Fylo logo"
-              width={100}
-              height={100}
-            />
-          </Link>
+        {children}
 
-          <nav className="ml-auto space-x-4">
-            <Link href="/features" className="hover:underline">
-              Features
-            </Link>
-            <Link href="/team" className="hover:underline">
-              Team
-            </Link>
-            <Link href="/sign-in" className="hover:underline">
-              Sign In
-            </Link>
-          </nav>
-        </header>
-
-        <main className="col-start-2 col-end-4 mt-20 space-y-40">
-          {children}
-        </main>
-
-        <footer className="grid grid-cols-subgrid col-start-1 col-end-5 bg-gray-900 text-white py-40 -mt-40">
+        <footer className="grid grid-cols-subgrid col-start-1 col-end-5 bg-gray-900 text-white py-40">
           <section className="grid col-start-2 col-end-4 pt-16">
             <Image
               className="mb-10"

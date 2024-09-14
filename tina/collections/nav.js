@@ -1,3 +1,5 @@
+import { title } from "./utils/fields";
+
 /**
  * @type {import('tinacms').Collection}
  */
@@ -23,6 +25,7 @@ export const nav = {
         itemProps: (item) => ({ label: item.link }),
       },
       fields: [
+        title(),
         {
           label: "Link",
           name: "link",

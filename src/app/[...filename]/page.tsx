@@ -15,7 +15,7 @@ export default async function Page({
 }: {
   params: { filename: string[] };
 }) {
-  const data = await client.queries.page({
+  const data = await client.queries.pageAndNav({
     relativePath: `${params.filename}.mdx`,
   });
 

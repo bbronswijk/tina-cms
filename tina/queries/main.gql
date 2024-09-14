@@ -13,7 +13,7 @@ query pageAndNav($relativePath: String!) {
     }
     ...PageParts
   }
-  nav(relativePath: $relativePath) {
+  nav(relativePath: "/Navigatie.md") {
     ... on Document {
       _sys {
         filename
