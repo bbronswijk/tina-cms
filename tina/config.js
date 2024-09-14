@@ -1,6 +1,7 @@
 import { defineConfig } from "tinacms";
 import { page } from "./collections/page";
 import { nav } from "./collections/nav";
+import { footer } from "./collections/footer";
 
 export const config = defineConfig({
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
@@ -20,7 +21,7 @@ export const config = defineConfig({
     outputFolder: "admin",
   },
   schema: {
-    collections: [page, nav],
+    collections: [page, nav, footer],
   },
 });
 

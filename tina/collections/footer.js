@@ -1,12 +1,12 @@
-import { list, title } from "./utils/fields";
+import { textarea, string, title, list } from "./utils/fields";
 
 /**
  * @type {import('tinacms').Collection}
  */
-export const nav = {
-  label: "Navigatie",
-  name: "nav",
-  path: "content/nav",
+export const footer = {
+  label: "Footer",
+  name: "footer",
+  path: "content/footer",
   format: "md",
   ui: {
     allowedActions: {
@@ -16,7 +16,10 @@ export const nav = {
     global: true,
   },
   fields: [
-    list("Navigatie items", "title", [
+    textarea("About"),
+    string("Phone"),
+    string("Email"),
+    list("Links", "title", [
       title(),
       {
         label: "Link",
@@ -25,5 +28,8 @@ export const nav = {
         collections: ["page"],
       },
     ]),
+    string("Facebook"),
+    string("Twitter"),
+    string("Instagram"),
   ],
 };

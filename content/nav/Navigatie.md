@@ -1,5 +1,5 @@
 ---
-links:
+items:
   - title: Home
     link: content/page/home.mdx
   - title: Team

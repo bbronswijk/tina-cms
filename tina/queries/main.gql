@@ -27,4 +27,18 @@ query pageAndNav($relativePath: String!) {
     }
     ...NavParts
   }
+  footer(relativePath: "/Footer.md") {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...FooterParts
+  }
 }

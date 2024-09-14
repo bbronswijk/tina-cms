@@ -8,6 +8,7 @@ import { Content } from "@/app/[...filename]/Content";
 import { Testimonials } from "@/app/[...filename]/Testimonials";
 import { CallToAction } from "@/app/[...filename]/CallToAction";
 import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 interface ClientPageProps {
   query: string;
@@ -48,6 +49,7 @@ export default function ClientPage(props: ClientPageProps) {
           }
         })}
       </main>
+      <Footer {...data.footer} />
     </>
   );
 }
